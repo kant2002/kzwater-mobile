@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#1.0",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+	"jasny-bootstrap": "~3.1.3"
   }
 }
