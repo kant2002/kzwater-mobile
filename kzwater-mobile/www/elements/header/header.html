@@ -1,11 +1,14 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../bower_components/jasny-bootstrap/css/jasny-bootstrap.min.css"/>
 
 <dom-module name="app-header" attributes="caption" horizontal layout>
  
         <style>
             #host {
 				width: 100%;
-                height: 30px;
+                height: 48px;
                 padding: 10px;
                 background-color: #270289;
                 border-bottom: 1px solid white;
@@ -25,14 +28,56 @@
                 color: white;
                 line-height: 30px;
             }
+			.navmenu{
+				width: 200px;
+			}
+			html, body {
+				height: 100%;
+			}
+			body {
+				padding: 50px 0 0 0;
+			}
+			.navbar-toggle {
+				float: left;
+				margin-left: 15px;
+			}
+			@media (min-width: 0) {
+				.navbar-toggle{
+					display: block;
+				}
+			}
+			@media (min-width: 992px) {
+				body{
+					padding: 0;
+				}
+				.navbar {
+					right: auto;
+					background: none;
+					border: none;
+				}
+			}
+			
+			
         </style>
 	 <template>
 		 <div id="host">
-			 <table>
-				 <tr>
-					 <td><div class="app-title" flex>{{ caption }}</div></td>
-				 </tr>
-			 </table>
+			 <nav class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+			 <a class="navmenu-brand" href="#">Menu</a>
+				 <ul class="nav navmenu-nav">
+				<li class="active"><a href="#">punkt1</a></li>
+				<li class="active"><a href="#">punkt2</a></li>
+				<li class="active"><a href="#">punkt3</a></li>
+				 </ul>
+			 </nav>
+			 <div class="navbar navbar-default navbar-fixed-top">
+			 <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+				 </button>
+			 </div>
+		
+					 <div class="app-title" flex>{{ caption }}</div>
         <div class="commands">
             <content></content>
         </div>
