@@ -1,0 +1,21 @@
+{
+  "name": "kzwater-mobile",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Mariya-dku/kzwater-mobile",
+  "authors": [
+    "Mariya-dku <m.tutynina@list.ru>"
+  ],
+  "description": "mobile project for Aral sea organization",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+	 "dependencies": {
+    "polymer":"Polymer/polymer#1.0"
+  }
+}
