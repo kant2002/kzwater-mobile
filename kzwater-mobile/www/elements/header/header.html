@@ -1,0 +1,60 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module name="app-header" attributes="caption" horizontal layout>
+ 
+        <style>
+            #host {
+				width: 100%;
+                height: 30px;
+                padding: 10px;
+                background-color: #270289;
+                border-bottom: 1px solid white;
+            }
+            
+            .app-title {
+                font-size: 2em;
+                padding-left: 10px;
+                line-height: 36px;
+                color: white;
+            }
+			.clip {
+				color:white;
+			}
+            
+            .commands {
+                color: white;
+                line-height: 30px;
+            }
+        </style>
+	 <template>
+		 <div id="host">
+			 <table>
+				 <tr>
+					 <td><div class="app-title" flex>{{ caption }}</div></td>
+				 </tr>
+			 </table>
+        <div class="commands">
+            <content></content>
+        </div>
+        <div style="clear: both"></div>
+		 </div>
+  </template>
+  <script>
+    (function () {
+        Polymer({
+		is: "app-header",
+
+		// add properties and methods on the element's prototype
+
+		properties: {
+		  // declare properties for the element's public API
+		  caption: {
+			type: String,
+			value: "Header"
+		  }
+		}
+	  });
+    })();
+  </script>
+</dom-module>
+
