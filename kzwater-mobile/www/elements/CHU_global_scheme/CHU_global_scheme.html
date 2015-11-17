@@ -1,18 +1,37 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<dom-module id="chu-global-scheme">
-
-  <template>
-    <p>
-		<span id="CHU_global_svg_sheme">
-			<embed src="CHU_global_scheme.svg">
-		</span>  
-	</p>
-  </template>
-
-  <script>
-    Polymer({
-      is: "chu-global-scheme"
-    });
-  </script>
-
-</dom-module>
+<!DOCTYPE html>
+<html>
+  <head>
+	  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+      <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+	  <link rel="stylesheet" type="text/css" href="bower_components/jasny-bootstrap/css/jasny-bootstrap.min.css"/>
+	  <link rel="import" href="../elements.html">
+  </head>
+		<style>
+	.scheme {
+		position: relative;
+		padding-bottom: 56.25%; /* 16/9 ratio */
+		padding-top: 30px; /* IE6 workaround*/
+		height: 0;
+		overflow: hidden;
+		}
+	.scheme embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	
+		}
+	</style>
+  <body>
+   <app-header caption="Глобальная схема Чу"></app-header>
+   <div class="scheme">
+	  <embed src="CHU_global_scheme.svg">
+	  </div>
+	  <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bower_components/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+  </body>
+</html>
