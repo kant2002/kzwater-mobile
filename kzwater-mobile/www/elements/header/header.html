@@ -49,6 +49,9 @@
 			.navbar-toggle .icon-bar{
 				background-color: white;
 			}
+			.navbar .navbar-toggle .navmenu .icon-bar{
+				position: fixed;
+			}
 			@media (min-width: 0) {
 				.navbar-toggle{
 					display: block;
@@ -64,17 +67,33 @@
 					border: none;
 				}
 			}
-			
+			@media (max-width: 1600px) {
+				.app-title{
+					font-size: 2em;
+				}
+			}
+			@media (max-width: 930px) {
+				.app-title{
+					font-size: 1.5em;
+				}
+			}
+			@media (min-width: 470) {
+				.app-title{
+					font-size: 1em;
+				}
+			}
 			
         </style>
 	 <template>
 		 <div id="host">
 			 <nav class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-			 <a class="navmenu-brand" href="#">Menu</a>
+			 <a class="navmenu-brand" href="#">Меню</a>
 				 <ul class="nav navmenu-nav">
-				<li class="active"><a href="#">punkt1</a></li>
-				<li class="active"><a href="#">punkt2</a></li>
-				<li class="active"><a href="#">punkt3</a></li>
+				<li class="active"><a href="../Talas_scheme/talas_scheme.html"> Схема Талас </a></li>
+				<li class="active"><a href="../CHU_global_scheme/CHU_global_scheme.html">Глобальная схема Чу</a></li>
+				<li class="active"><a href="../CHU_scheme/CHU_scheme.html">Схема Чу</a></li>
+				<li class="active"><a href="../Syrdarya_scheme/syrdarya_scheme.html">Схема Сырдарья</a></li>
+				<li class="active"><a href="#">О нас</a></li>
 				 </ul>
 			 </nav>
 			 <div class="navbar navbar-default navbar-fixed-top">
