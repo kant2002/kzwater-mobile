@@ -7,6 +7,9 @@
  
         <style>
             #host {
+				position: absolute; 
+				left: 0; 
+     			top: 0; 
 				width: 100%;
                 height: 48px;
                 padding: 10px;
@@ -15,6 +18,9 @@
             }
             
             .app-title {
+				position: absolute; 
+				left: 1; 
+     			top: 1;
                 font-size: 2em;
                 padding-left: 10px;
                 line-height: 36px;
@@ -87,29 +93,28 @@
 	 <template>
 		 <div id="host">
 			 <nav class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-			 <a class="navmenu-brand" href="../../index.html">Меню</a>
-				 <ul class="nav navmenu-nav">
-				<li class="active"><a href="../Talas_scheme/talas_scheme.html"> Схема Талас </a></li>
-				<li class="active"><a href="../CHU_global_scheme/CHU_global_scheme.html">Глобальная схема Чу</a></li>
-				<li class="active"><a href="../CHU_scheme/CHU_scheme.html">Схема Чу</a></li>
-				<li class="active"><a href="../Syrdarya_scheme/syrdarya_scheme.html">Схема Сырдарья</a></li>
-				
+			 	<a class="navmenu-brand" href="../../index.html">Меню</a>
+				<ul class="nav navmenu-nav">
+					<li class="active"><a href="../Talas_scheme/talas_scheme.html"> Схема Талас </a></li>
+					<li class="active"><a href="../CHU_global_scheme/CHU_global_scheme.html">Глобальная схема Чу</a></li>
+					<li class="active"><a href="../CHU_scheme/CHU_scheme.html">Схема Чу</a></li>
+					<li class="active"><a href="../Syrdarya_scheme/syrdarya_scheme.html">Схема Сырдарья</a></li>
 				 </ul>
 			 </nav>
 			 <div class="navbar navbar-default navbar-fixed-top">
-			 <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-				 <span class="icon-bar"></span>
-				 <span class="icon-bar"></span>
-				 <span class="icon-bar"></span>
+			 	<button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
 				 </button>
 			 </div>
 		
-					 <div class="app-title" flex>{{ caption }}</div>
-        <div class="commands">
+		 <div class="app-title" flex>{{ caption }}</div>
+         <div class="commands">
             <content></content>
         </div>
         <div style="clear: both"></div>
-		 </div>
+	  </div>
   </template>
   <script>
     (function () {
